@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 36px;
+    font-family: sans-serif;
+    
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;   /*5 times auto means we want 5 columns*/
+    /*instead of we can also write the specific size for that image like 200px auto 420px ....*/
+    grid-gap:16px;
+    row-gap: 32px;
+    
+
+}
+
+.movie-poster{
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    /* filter: grayscale(100%); */  /*black and white*/
+    /* box-shadow: 0 0 20px whitesmoke; */  /*for shadow*/
+}
+
+.movie-poster:hover{
+    animation: zoom 1s forwards;
+    /* filter: grayscale(0%); */
+    /* filter: drop-shadow(0 0 10px whitesmoke); */
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}
+
